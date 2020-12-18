@@ -14,7 +14,16 @@
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <ion-item *ngFor="let item of listUsuario">
+      <ion-label class="ion-text-wrap">
+        <ion-text color="primary">
+          <h3>{{item.id}}</h3>
+        </ion-text>
+        <p>{{item.name}}</p>
+        <ion-text color="secondary">
+          <p>{{item.email}}</p>
+        </ion-text>
+      </ion-label>
+    </ion-item>
   </div>
 </ion-content>
